@@ -4,19 +4,19 @@
 
 Install "dfu-util" on your computer: http://dfu-util.sourceforge.net
 (macOS: brew install dfu-util / Linux: sudo apt-get install dfu-util / Windows: follow the guide on dfu-util web site)
+以下步骤以Windows平台为例  
+1. unplug USB from Easy PDK programmer 断开EasyPDK与电脑的USB连接线  
 
-1. unplug USB from Easy PDK programmer
+2. on Easy PDK programmer PRESS AND KEEP HOLDING THE BUTTON 按住EasyPDK按键不要松开  
 
-2. on Easy PDK programmer PRESS AND KEEP HOLDING THE BUTTON
+3. WHILE STILL HOLDING THE BUTTON connect USB 按住按键不放时连接电脑USB线  
 
-3. WHILE STILL HOLDING THE BUTTON connect USB
+4. ONLY AFTER USB is connected release the button 成功连接USB后松开按键  
 
-4. ONLY AFTER USB is connected release the button
-
-5. EXECUTE: 
+5. EXECUTE: 按下面指令刷入bin固件  
    dfu-util -d 0483:df11 -a "@Internal Flash  /0x08000000/064*0002Kg" --dfuse-address 0x08000000 -D EASYPDKPROG.bin 
 
-   EXAMPLE OUTPUT:
+   EXAMPLE OUTPUT:  输出示例  
    ---------------
    dfu-util 0.9
    ...
@@ -35,7 +35,7 @@ Install "dfu-util" on your computer: http://dfu-util.sourceforge.net
    Downloading to address = 0x08000000, size = 27635
    Download  [=========================] 100%        27635 bytes
    Download done.
-   File downloaded successfully
+   File downloaded successfully 表示下载固件成功。  
 
-6. UNPLUG USB from Easy PDK programmer
+6. UNPLUG USB from Easy PDK programmer 断开USB线完成  
 
